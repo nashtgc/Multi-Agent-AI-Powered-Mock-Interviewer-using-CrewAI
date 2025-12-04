@@ -1,7 +1,7 @@
 """Main Crew orchestration for the Mock Interviewer system."""
 
 from crewai import Crew, Process
-from typing import Optional
+from typing import List, Optional
 
 from .agents import (
     create_interviewer_agent,
@@ -114,7 +114,7 @@ class MockInterviewerCrew:
         self,
         job_role: str,
         years_experience: int,
-        key_skills: list[str],
+        key_skills: List[str],
     ) -> str:
         """
         Run a quick mock interview with minimal input.
